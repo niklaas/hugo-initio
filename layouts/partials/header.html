@@ -19,7 +19,7 @@
 	<!-- Custom styles -->
 	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
 	<!-- User styles -->
-	{{ range .Site.Params.custom_css }}
+	{{ range .Site.Params.customCss }}
 	<link rel="stylesheet" href="{{ . | absURL }}">
 	{{ end }}
 
