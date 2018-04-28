@@ -13,3 +13,19 @@
     </div>
 
 </div> <!-- / section -->
+
+<!-- Notifications for section Services -->
+<div class="row section topspace">
+    {{ range where (where .Data.Pages "Section" "notification") ".Params.parent" "=" "services" }}
+    <div class="panel panel-cta">
+        <div class="panel-body">
+            <div class="col-lg-11">
+                {{ .Content }}
+            </div>
+            <div class="col-lg-1 text-right">
+                <i class="fas fa-info fa-5x"></i>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div> <!-- /section -->
