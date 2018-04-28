@@ -2,9 +2,7 @@
 
 	<div class="container">
 
-        {{ if .Site.Params.subheader }}
-            {{ partial "subheader.html" . }}
-        {{ end }}
+        {{ partial "subheader.html" . }}
 
         {{ if .Site.Params.showServices }}
             {{ partial "services.html" . }}

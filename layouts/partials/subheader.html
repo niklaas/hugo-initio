@@ -1,7 +1,7 @@
 <div class="row section topspace">
     <div class="col-md-12">
-        <p class="lead text-center text-muted">
-            {{ .Site.Params.subheader }}
-        </p>
+        <div class="lead text-center text-muted">
+            {{ partialCached "subheader.md" . | markdownify }}
+        </div>
     </div>
 </div> <!-- / section -->
