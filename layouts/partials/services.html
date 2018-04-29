@@ -1,29 +1,15 @@
 <div class="row section featured topspace">
 
-    <h2 class="section-title"><span>{{ .Site.Params.services.title }} </span></h2>
+    <h2 class="section-title"><span>Services</span></h2>
 
     <div class="">
         {{ range where .Data.Pages "Section" "service" }}
             <div class="col-sm-6 col-md-3">
                 <h3 class="text-center">{{ .Title }}</h3>
                 <p>{{ .Summary }}</p>
-                <p class="text-center"><a href="{{ .Permalink }}" class="btn btn-action">{{ .Site.Params.readMore }}</a></p>
+                <p class="text-center"><a href="{{ .Permalink }}" class="btn btn-action">Read more</a></p>
             </div>
         {{ end }}
     </div>
 
 </div> <!-- / section -->
-
-<!-- Notification for section Services -->
-<div class="row section topspace">
-    <div class="panel panel-cta">
-        <div class="panel-body">
-            <div class="col-lg-11">
-                {{ partialCached "services-note.md" . | markdownify }}
-            </div>
-            <div class="col-lg-1 text-right">
-                <i class="fas fa-info fa-5x"></i>
-            </div>
-        </div>
-    </div>
-</div> <!-- /section -->
